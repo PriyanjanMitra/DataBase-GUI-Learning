@@ -2,7 +2,6 @@ import mysql.connector
 import tkinter
 from tkinter import ttk
 import csv
-import time
 
 
 def login():
@@ -522,8 +521,8 @@ def destroy():
     root.after(5000, lambda:root.destroy())
 
 
-airportdb = mysql.connector.connect(host="localhost", user="root",
-                                    password='1234', database="airport")
+airportdb = mysql.connector.connect(host="localhost", user=YOUR_USERNAME,
+                                    password=YOUR_PASSWORD, database=YOUR_DATABASE)
 airportcursor = airportdb.cursor(buffered=True)
 root = tkinter.Tk()
 root.geometry('600x600')
